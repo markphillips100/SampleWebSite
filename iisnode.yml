@@ -1,1 +1,4 @@
-nodeProcessCommandLine: "D:\home\site\wwwroot\bin\node.exe"
+loggingEnabled: false
+debuggingEnabled: false
+devErrorsEnabled: false
+node_env: production
