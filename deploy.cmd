@@ -103,7 +103,7 @@ IF EXIST "%DEPLOYMENT_SOURCE%\package.json" (
 echo Building the DocPad site
 IF EXIST "%DEPLOYMENT_SOURCE%\package.json" (
   pushd "%DEPLOYMENT_SOURCE%"
-  call :ExecuteCmd "%DEPLOYMENT_SOURCE%\node_modules\.bin\docpad generate
+  call :ExecuteCmd "%DEPLOYMENT_SOURCE%\node_modules\.bin\docpad" generate
   IF !ERRORLEVEL! NEQ 0 goto error
   popd
 )
