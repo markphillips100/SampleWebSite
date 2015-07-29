@@ -1,0 +1,3 @@
+<p><%= @document.original.fields.title %></p>
+
+<pre><%=JSON.stringify(@document.original.fields, null, 4) %></pre>

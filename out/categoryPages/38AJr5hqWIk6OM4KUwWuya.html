@@ -1,0 +1,114 @@
+<html>
+<head>
+    <title>Sample Website</title>
+    <meta name="generator" content="DocPad v6.78.1" />
+	<style >html.wait {
+	cursor: wait !important;
+	opacity: 0;
+	transition: opacity 0.5s ease;
+}</style><link  rel="stylesheet" href="/styles/style.css" />
+</head>
+<body>
+  <img src="/images/logo.gif" />
+  <h2>Static pages</h2>
+  <ul>
+    
+        <li class="inactive">
+            <a href="/about.html">
+                About Me
+            </a>
+        </li>
+    
+        <li class="inactive">
+            <a href="/index.html">
+                Welcome!
+            </a>
+        </li>
+    
+  </ul>
+  <h2>Dynamic contentful driven pages</h2>
+  <ul>
+    
+        <li class="inactive">
+            <a href="/categoryPages.html">
+                Category Pages
+            </a>
+        </li>
+    
+        <li class="inactive">
+            <a href="/facilities.html">
+                Facilities
+            </a>
+        </li>
+    
+        <li class="inactive">
+            <a href="/shops.html">
+                Shops
+            </a>
+        </li>
+    
+        <li class="inactive">
+            <a href="/videoPages.html">
+                Video Pages
+            </a>
+        </li>
+    
+  </ul>
+  <h1></h1>
+  <p>Parking</p>
+
+<pre>{
+    &quot;name&quot;: &quot;PA Parking&quot;,
+    &quot;category&quot;: &quot;Parking&quot;,
+    &quot;facility&quot;: &quot;PA&quot;,
+    &quot;body&quot;: &quot;There are two privately operated car parks close to Princess Alexandra Hospital. There is no other on-site parking available on the campus. Brisbane City Council parking restrictions apply in all streets surrounding the hospital.\n\n## Drop-off zones\nPrincess Alexandra Hospital has two drop off/pick up zones for the main hospital building. These zones can be accessed via the main Ipswich Road entrance and the Cornwall Street entrance. These zones are subject to time restrictions.\n\n## Car parks\n### Metro multi-storey car park\nThe Metro multi-storey car park is located on the hospital campus on the corner of Ipswich Road and O’Keefe Street. Entry to this car park is off Ipswich Road. There is a link-way to the main foyer of the hospital.\n\nParking rates:\n\n| Time period | Price |\n| :--- | :--- |\n| Up to 0.5 hours | $3.80 |\n| 0.5 - 1 hour | $7.60 |\n| 1 - 1.5 hours | $11.40 | \n| 1.5 - 2 hours | $15.20 |\n| 2+ hours | $18.00 |\n\n### PA Parking multi-storey car park\nThe PA Parking multi-storey car park is located opposite the hospital on Ipswich Road. Entry to this car park is off Wolseley Street. There is a link-way over Ipswich Road and then a short walk to the main foyer of the hospital.\n\nParking rates:\n\n| Time period | Price |\n| :--- | :--- |\n| Up to 0.5 hours | $3.00 |\n| 0.5 - 1 hour | $7.00 |\n| 1 - 1.5 hours | $10.00 |\n| 1.5 - 2 hours | $14.00 |\n| 2+ hours | $16.00 |\n\n## Disabled parking\nVehicles displaying a Disabled Parking Permit can park in designated disabled bays on Level 4 of the Metro multi-storey car park. There is a link-way from this car park to the main foyer of the hospital. Princess Alexandra Hospital staff can provide wheelchair assistance if required; please use the green courtesy phone at the entrance to the link-way on Level 5 to phone for assistance.\n\n## Bicycle facilities\nThere are bicycle parking facilities on the ground floor of the Metro multi-storey car park located on the corner of Ipswich Road and O’Keefe Street. There is a link-way from this car park to the main foyer of the hospital. There is also a bicycle/pedestrian overpass across Ipswich Road.&quot;,
+    &quot;title&quot;: &quot;Parking&quot;
+}</pre>
+  <script >(function(){
+	/* Did we just livereload? */
+var log = !!(localStorage && console && console.log && true);
+if ( log && localStorage.getItem('/docpad-livereload/reloaded') === 'yes' ) {
+	localStorage.removeItem('/docpad-livereload/reloaded');
+	console.log('LiveReload completed at', new Date())
+}
+
+/* Listen for the regenerated event and perform a reload of the page when the event occurs */
+var listen = function(){
+	var primus = new Primus('/docpad-livereload');
+	primus.on('data', function(data){
+		if ( data && data.message ) {
+			if ( data.message === 'generateBefore' ) {
+				if ( log ) {
+					console.log('LiveReload started at', new Date());
+				}
+				if ( typeof document.getElementsByTagName !== 'undefined' ) {
+	document.getElementsByTagName('html')[0].className += ' wait';
+}
+			}
+			else if ( data.message === 'generateAfter' ) {
+				if ( log ) {
+					localStorage.setItem('/docpad-livereload/reloaded', 'yes');
+				}
+				document.location.reload();
+			}
+		}
+	});
+};
+	/* Inject socket into our page */
+var inject = function(){
+	var t = document.createElement('script');
+	t.type = 'text/javascript';
+	t.async = 'async';
+	t.src = '/primus/primus.js';
+	t.onload = listen;
+	var s = document.getElementsByTagName('script')[0];
+	s.parentNode.insertBefore(t, s);
+};
+	if ( typeof Primus !== 'undefined' ) {
+		listen();
+	} else {
+		inject();
+	}
+})();</script><script defer="defer"  src="/vendor/jquery.js"></script><script defer="defer"  src="/scripts/script.js"></script>
+</body>
+</html>

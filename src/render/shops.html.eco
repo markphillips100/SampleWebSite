@@ -1,0 +1,17 @@
+---
+title: "Shops"
+layout: "default"
+isContentPage: true
+---
+
+<p>This is a list of published shop entries.</p>
+
+<ul>
+    <% for page in @getCollection("shops").toJSON(): %>
+    <li class="<%= if page.id is @document.id then 'active' else 'inactive' %>">
+		<a href="<%= page.url %>">
+			<%= page.original.fields.title %>
+		</a>
+    </li>
+    <% end %>
+</ul>

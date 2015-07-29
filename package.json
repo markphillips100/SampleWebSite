@@ -1,0 +1,22 @@
+{
+  "name": "no-skeleton.docpad",
+  "version": "0.1.0",
+  "description": "New DocPad project without using a skeleton",
+  "dependencies": {
+    "docpad": "~6.78.1",
+    "docpad-plugin-coffeescript": "~2.5.0",
+    "docpad-plugin-contentful": "~2.1.1",
+    "docpad-plugin-eco": "~2.1.0",
+    "docpad-plugin-less": "~2.4.1",
+    "docpad-plugin-livereload": "~2.6.1",
+    "docpad-plugin-marked": "~2.3.0",
+    "docpad-plugin-mongodb": "~2.3.2",
+    "docpad-plugin-partials": "~2.9.2",
+    "docpad-plugin-tsc": "~2.0.2",
+    "extendr": "^2.1.0"
+  },
+  "main": "node_modules/.bin/docpad-server",
+  "scripts": {
+    "start": "node_modules/.bin/docpad-server"
+  }
+}
