@@ -1,6 +1,6 @@
 {
   "name": "SampleWebSite",
-  "engines": {"node": "0.12.4"},
+  "engines": {"node": "0.12.x"},
   "version": "0.1.0",
   "description": "New DocPad project without using a skeleton",
   "dependencies": {
