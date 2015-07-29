@@ -70,6 +70,10 @@ fi
 
  echo Handling deployment.
 
+ # Turn off SSL for npm
+npm config set strict-ssl false 
+exitWithMessageOnError "npm failed to turn off strict-ssl"
+ 
  # 1. Install npm packages
  if [ -e "$DEPLOYMENT_SOURCE/package.json" ]; then
    cd "$DEPLOYMENT_SOURCE"
@@ -86,7 +90,7 @@ fi
 
  # 3. KuduSync
  echo Kudu Sync from "$DEPLOYMENT_SOURCE/out" to "$DEPLOYMENT_TARGET"
- $KUDU_SYNC_COMMAND -q -f "$DEPLOYMENT_SOURCE/out" -t "$DEPLOYMENT_TARGET" -n "$NEXT_MANIFEST_PATH" -p "$PREVIOUS_MANIFEST_PATH" -i ".git;.deployment;deploy.sh" 2> /dev/null
+ $KUDU_SYNC_CMD -q -f "$DEPLOYMENT_SOURCE/out" -t "$DEPLOYMENT_TARGET" -n "$NEXT_MANIFEST_PATH" -p "$PREVIOUS_MANIFEST_PATH" -i ".git;.deployment;deploy.sh" 2> /dev/null
  exitWithMessageOnError "Kudu Sync failed"
 
 ##################################################################################################################################
