@@ -99,6 +99,10 @@ IF EXIST "%DEPLOYMENT_SOURCE%\package.json" (
   popd
 )
 
+:: 3. Copy config file with username defined so that MAC address isn't looked up on Azure
+echo Copy docpad config to user profile folder
+copy /Y "%DEPLOYMENT_SOURCE%\deployment.cson" "%USERPROFILE%\.docpad.cson"
+
 :: 3. Build DocPad Site
 echo Building the DocPad site
 IF EXIST "%DEPLOYMENT_SOURCE%\package.json" (
