@@ -13,8 +13,7 @@
     "docpad-plugin-less": "~2.4.1",
     "docpad-plugin-livereload": "~2.6.1",
     "docpad-plugin-marked": "~2.3.0",
-    "docpad-plugin-partials": "~2.9.2",
-    "docpad-plugin-tsc": "~2.0.2"
+    "docpad-plugin-partials": "~2.9.2"
   },
   "main": "node node_modules/.bin/docpad-server"
 }
